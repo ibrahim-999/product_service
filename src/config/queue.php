@@ -98,9 +98,10 @@ return [
                 ],
                 'queue' => [
                     'job' => VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob::class
-                ]
-            ],
+                ],
 
+            ],
+            'timeout' => 10,
             'worker' => env('RABBITMQ_WORKER', 'default'),
             'after_commit' => false
         ],
